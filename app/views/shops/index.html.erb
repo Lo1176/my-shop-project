@@ -3,10 +3,10 @@
 <% if @shops.nil? || @shops.length < 1 %>
   <h2><%="There is no shop yet"%></h2>
 <% else %>
-  <% @shops.each do |s|%>
+  <% @shops.each do |shop|%>
   <ul>
     <li>
-      <h2><%= s.name %></h2>
+      <h2><%= link_to shop.name, shop %></h2>
     </li>
   </ul>
 
