@@ -1,3 +1,2 @@
 <h1><%= @shop.name %></h1>
-<p>Horaires : </p>
-<p>opening at: <%=@shop.business_hours.find(day= 1).opening_hour.strftime('%H:%M')%>-<%=@shop.business_hours.find(day= 1).break_start.strftime('%H:%M')%>, <%=@shop.business_hours.find(day= 1).break_end.strftime('%H:%M')%>-<%=@shop.business_hours.find(day= 1).closing_hour.strftime('%H:%M')%></p>
+<p>Horaires : <%=@shop.business_hours.find(day= 1).opening_hour.strftime('%H:%M')%>-<%=@shop.business_hours.find(day= 1).break_start.strftime('%H:%M')%>, <%=@shop.business_hours.find(day= 1).break_end.strftime('%H:%M')%>-<%=@shop.business_hours.find(day= 1).closing_hour.strftime('%H:%M')%></p>
