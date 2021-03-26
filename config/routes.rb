@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'shop#index'
+  root to: 'shops#index'
   resources :shop, only: %i[index show]
 end
