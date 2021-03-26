@@ -1,6 +1,15 @@
 <h1>Welcome to the shops</h1>
 
-<%= @shops.each do |s|%>
-<%= s.name %>
+<% if @shops.nil? || @shops.length < 1 %>
+  <h2><%="There is no shop yet"%></h2>
+<% else %>
+  <% @shops.each do |s|%>
+  <ul>
+    <li>
+      <h2><%= s.name %></h2>
+    </li>
+  </ul>
+
+  <% end %>
 <% end %>
-<p>Find me in app/views/shops/index.html.erb</p>
+
