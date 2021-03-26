@@ -28,12 +28,11 @@ RSpec.describe Shop, type: :model do
     end
     it "should not allow a name shorter than 2 characters" do
       @shop = Shop.create.name = 'i'
-      expect(@shop).to_not be_valid
+      expect(@shop.lentgh).to_not be_valid
     end
     it "shouldn\'t accept a name shorter than 2 letters" do
       short = Shop.create(name: 'i')
       expect { short.name.lentgh }.is_at_least(2).with_message(/name is too short/)
     end
-
   end
 end
