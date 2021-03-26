@@ -1,4 +1,4 @@
 class BusinessHour < ApplicationRecord
   belongs_to :shop
-  validates :opening_time, :closing_time, :day, :shops_id, presence: true
+  validates :opening_hour, :closing_hour, :day, presence: true
 end
