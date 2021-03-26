@@ -17,3 +17,6 @@ Shop.create(name: 'Le PMU')
 Shop.create(name: 'Sport Boutik')
 
 Shop.create(name: 'Theatre Robert')
+
+# BusinessHour Testing
+BusinessHour.create(opening_time: Time.parse('10:00'), closing_time: Time.parse('16:00'), day: 1, shop_id: 1)
