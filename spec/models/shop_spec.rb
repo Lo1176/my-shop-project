@@ -22,16 +22,18 @@ RSpec.describe Shop, type: :model do
     end
   end
 
-  context 'it is not valid without a name' do
-    it "a name can\'t be nil" do
-      Shop.should_not be_valid if Shop.create.name.nil?
+  context "could not be valid" do
+    it "a shop can\'t be empty" do
+      expect(@shop).not_to be_empty if @shop.nil?
     end
-
+    it "should not allow a name shorter than 2 characters" do
+      @shop = Shop.create.name = 'i'
+      expect(@shop).to_not be_valid
+    end
     it "shouldn\'t accept a name shorter than 2 letters" do
       short = Shop.create(name: 'i')
       expect { short.name.lentgh }.is_at_least(2).with_message(/name is too short/)
     end
-
 
   end
 end
